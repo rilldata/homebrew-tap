@@ -16,24 +16,24 @@ See more at https://docs.brew.sh/Taps
 ## How do I install packages from here?
 
 ```sh
-brew install rilldata/rill-developer/rill
+brew install rilldata/tap/rill
 ```
 
 You can also only add the tap which makes formulae within it
 available in search results (`brew search` output):
 
 ```sh
-brew tap rilldata/rill-developer
+brew tap rilldata/tap
 ```
 
 Note: to clone the tap via SSH you will need to use:
 
 ```sh
-brew tap rilldata/rill-developer https://github.com/rilldata/homebrew-rill-developer
+brew tap rilldata/tap https://github.com/rilldata/homebrew-tap
 ```
 
 While you may search across taps, it is necessary to always use
-fully qualified name (incl. the `rilldata/rill-developer/` prefix)
+fully qualified name (incl. the `rilldata/tap/` prefix)
 when refering to formulae in external taps such as this one
 outside of search.
 
@@ -42,7 +42,7 @@ outside of search.
 With the following commands, you can install the latest version of each product:
 ```sh
 # Formulae
-brew install rilldata/rill-developer/rill
+brew install rilldata/tap/rill
 ```
 
 ## Why should I install packages from this tap?
