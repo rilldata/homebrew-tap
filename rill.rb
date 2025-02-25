@@ -11,7 +11,7 @@ class Rill < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://cdn.rilldata.com/rill/v0.56.0/rill_darwin_amd64.zip"
-      sha256 "b7bf42877bcf0c77676ae548ce12994251a8b9019569f4ab179a710bcfce1f49"
+      sha256 "317ae3f14e46ee3247a799cea94fd6c9bf731d57a66bc5f1037d0575fb223b13"
 
       def install
         bin.install "rill"
@@ -19,7 +19,7 @@ class Rill < Formula
     end
     if Hardware::CPU.arm?
       url "https://cdn.rilldata.com/rill/v0.56.0/rill_darwin_arm64.zip"
-      sha256 "656baf79da80deea0cc66623909ef5ca1feadaaa6db2caafdcb342ad4396db67"
+      sha256 "d894fd35e39e9ec4f4f14f72d86c780d7d36f347d3bb38263af06a481a9a6d9c"
 
       def install
         bin.install "rill"
@@ -31,7 +31,7 @@ class Rill < Formula
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
         url "https://cdn.rilldata.com/rill/v0.56.0/rill_linux_amd64.zip"
-        sha256 "3aa710b5e73f6d3c60af581cf153824707465bbc3055444b16fc29377efc7854"
+        sha256 "172c1c9a1a1781d4901e6485a58591e4e2d8fbf3657a436e4348421bafc3fb67"
 
         def install
           bin.install "rill"
@@ -41,7 +41,7 @@ class Rill < Formula
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
         url "https://cdn.rilldata.com/rill/v0.56.0/rill_linux_arm64.zip"
-        sha256 "994a13bda85e1078967e27ea1f67c658396c6ad3208a953b93116276674875e8"
+        sha256 "9848eb19597ea84092ce09c28702630d818560e2f1d713096aca53052c8ae1e8"
 
         def install
           bin.install "rill"
