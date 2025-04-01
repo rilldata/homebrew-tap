@@ -5,21 +5,21 @@
 class Rill < Formula
   desc "The Rill CLI"
   homepage "https://github.com/rilldata/rill"
-  version "0.58.4"
+  version "0.58.5"
   license "Apache 2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://cdn.rilldata.com/rill/v0.58.4/rill_darwin_amd64.zip"
-      sha256 "dd803b2ad31cea06592b93b3b69c79ef1e417604430ccd87aa91ce36b65fe2ef"
+      url "https://cdn.rilldata.com/rill/v0.58.5/rill_darwin_amd64.zip"
+      sha256 "73fef3a3c3a0b7a9ede691a739e2cc81be48175768dd112257f21aa92036029f"
 
       def install
         bin.install "rill"
       end
     end
     if Hardware::CPU.arm?
-      url "https://cdn.rilldata.com/rill/v0.58.4/rill_darwin_arm64.zip"
-      sha256 "d8295d25beed3f06d966ab5dab6be203e512bbd9cd61f1a908027b4098427bd1"
+      url "https://cdn.rilldata.com/rill/v0.58.5/rill_darwin_arm64.zip"
+      sha256 "a16a27a0df1cbfd024e738ef3821352186bd55dc2a103a1ac58872f2078c2c9d"
 
       def install
         bin.install "rill"
@@ -30,8 +30,8 @@ class Rill < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://cdn.rilldata.com/rill/v0.58.4/rill_linux_amd64.zip"
-        sha256 "49c75204af74ae4789bcf4d22b69adf69c4ac9b3613af2ea86c1772bc37a2329"
+        url "https://cdn.rilldata.com/rill/v0.58.5/rill_linux_amd64.zip"
+        sha256 "027b3ab23e9895bf3ddb0db2e912af226c482b69dc8fd973ffd4ff779081c8ad"
 
         def install
           bin.install "rill"
@@ -40,8 +40,8 @@ class Rill < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://cdn.rilldata.com/rill/v0.58.4/rill_linux_arm64.zip"
-        sha256 "385255041a0458e0dacc691d65488991f27731b39aa7238df74e178770eeaab2"
+        url "https://cdn.rilldata.com/rill/v0.58.5/rill_linux_arm64.zip"
+        sha256 "383db00e58e0c39acfa28768cc0f185d7eac5ef11870c3df602feb4f71492c7c"
 
         def install
           bin.install "rill"
