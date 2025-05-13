@@ -5,21 +5,21 @@
 class Rill < Formula
   desc "The Rill CLI"
   homepage "https://github.com/rilldata/rill"
-  version "0.61.0"
+  version "0.61.1"
   license "Apache 2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://cdn.rilldata.com/rill/v0.61.0/rill_darwin_amd64.zip"
-      sha256 "3982a3ac69e8a98c4bc1e244abea33d120250d2a355585607be18bdfd38df1e7"
+      url "https://cdn.rilldata.com/rill/v0.61.1/rill_darwin_amd64.zip"
+      sha256 "58797510b5e08f3e5ca1404e5a8fcc37825f19db20f5973b0f53bafed98350a0"
 
       def install
         bin.install "rill"
       end
     end
     if Hardware::CPU.arm?
-      url "https://cdn.rilldata.com/rill/v0.61.0/rill_darwin_arm64.zip"
-      sha256 "c3e1fc4c643941809f0aca079932a5475fc78d84a15abb0826a996deedc6b5a8"
+      url "https://cdn.rilldata.com/rill/v0.61.1/rill_darwin_arm64.zip"
+      sha256 "194d8bbbbcca1a02fbd4d16cb1b028622d28f7b7a88351d27ab7b2e610733ca0"
 
       def install
         bin.install "rill"
@@ -28,24 +28,18 @@ class Rill < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      if Hardware::CPU.is_64_bit?
-        url "https://cdn.rilldata.com/rill/v0.61.0/rill_linux_amd64.zip"
-        sha256 "ba2ff286075651313319b7acfca15e1265a440cdc5ae07f291a2689ccb2a6190"
-
-        def install
-          bin.install "rill"
-        end
+    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
+      url "https://cdn.rilldata.com/rill/v0.61.1/rill_linux_amd64.zip"
+      sha256 "9cef7e8923393cb639450fa5ae6b12edf6057cd94dfdce9542a319799f124be2"
+      def install
+        bin.install "rill"
       end
     end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://cdn.rilldata.com/rill/v0.61.0/rill_linux_arm64.zip"
-        sha256 "2b9b417f710abfff5034415dc15902496c8021129e53b44dbd60738f0c7cb9e0"
-
-        def install
-          bin.install "rill"
-        end
+    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
+      url "https://cdn.rilldata.com/rill/v0.61.1/rill_linux_arm64.zip"
+      sha256 "17c907da2e584e59e59f82edb861522a4e3d1a6d38c4bf9003097061d10e541e"
+      def install
+        bin.install "rill"
       end
     end
   end
