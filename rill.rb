@@ -9,9 +9,9 @@ class Rill < Formula
   license "Apache 2.0"
   depends_on :linux
 
-  if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-    url "https://cdn.rilldata.com/rill/v0.65.3/rill_linux_arm64.zip"
-    sha256 "8384ea207cc3f79f57d25a20b10f969bca2e4b5143fdca837259539d0ec279e4"
+  if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
+    url "https://cdn.rilldata.com/rill/v0.65.3/rill_linux_amd64.zip"
+    sha256 "5f8731e20d0720579cbbc1fc8a7c5b78e9036cb920eb008f9e55407d11abfb2e"
     def install
       bin.install "rill"
     end
