@@ -7,11 +7,12 @@ class Rill < Formula
   homepage "https://github.com/rilldata/rill"
   version "0.65.4"
   license "Apache 2.0"
-  depends_on :linux
+  depends_on :macos
 
-  if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-    url "https://cdn.rilldata.com/rill/v0.65.4/rill_linux_arm64.zip"
-    sha256 "cba831f9b83222714839a97817e76d43e361713d6c9c83d7624ee458dca04b8c"
+  if Hardware::CPU.arm?
+    url "https://cdn.rilldata.com/rill/v0.65.4/rill_darwin_arm64.zip"
+    sha256 "bef3bbd61d674f1c272d40140e03f140163b62127eeeef16deecd9e216c0fec7"
+
     def install
       bin.install "rill"
     end
