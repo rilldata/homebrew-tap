@@ -7,13 +7,22 @@ class Rill < Formula
   homepage "https://github.com/rilldata/rill"
   version "0.66.3"
   license "Apache 2.0"
-  depends_on :linux
+  depends_on :macos
 
-  if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-    url "https://cdn.rilldata.com/rill/v0.66.3/rill_linux_amd64.zip"
-    sha256 "d1f9100a46eb12ac2d04c6ad25e6c96275816beda5e96c4fcb2054bc7ea9df7f"
-    def install
-      bin.install "rill"
+  url "https://cdn.rilldata.com/rill/v0.66.3/rill_darwin_amd64.zip"
+  sha256 "8f0f6bc3e15be5701316ef56e21ace2307ee9cfb82a2f0750d291815bef5324b"
+
+  def install
+    bin.install "rill"
+  end
+
+  if Hardware::CPU.arm?
+    def caveats
+      <<~EOS
+        The darwin_arm64 architecture is not supported for the Rill
+        formula at this time. The darwin_amd64 binary may work in compatibility
+        mode, but it might not be fully supported.
+      EOS
     end
   end
 
