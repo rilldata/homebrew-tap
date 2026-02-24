@@ -5,23 +5,23 @@
 class Rill < Formula
   desc "The Rill CLI"
   homepage "https://github.com/rilldata/rill"
-  version "0.81.4"
+  version "0.82.0"
   license "Apache 2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://cdn.rilldata.com/rill/v0.81.4/rill_darwin_amd64.zip"
-      sha256 "a2f565304f584107a449e541ff38315b3a133e3e89ca022c80cef2d2433517b6"
+      url "https://cdn.rilldata.com/rill/v0.82.0/rill_darwin_amd64.zip"
+      sha256 "929d8fba0740f65ddbe43112e2d19a6e08e8b690be8b8758a3688a886f74f683"
 
-      def install
+      define_method(:install) do
         bin.install "rill"
       end
     end
     if Hardware::CPU.arm?
-      url "https://cdn.rilldata.com/rill/v0.81.4/rill_darwin_arm64.zip"
-      sha256 "e544d27ec3e4cd1b05d35d9370096fcb01806ffbea71d2af87e3124ef59da064"
+      url "https://cdn.rilldata.com/rill/v0.82.0/rill_darwin_arm64.zip"
+      sha256 "0a315b12df61937e8b85d9996a75c16c5a7c201a32f2ec3f6d75c74805b90b55"
 
-      def install
+      define_method(:install) do
         bin.install "rill"
       end
     end
@@ -29,16 +29,16 @@ class Rill < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://cdn.rilldata.com/rill/v0.81.4/rill_linux_amd64.zip"
-      sha256 "b84fcbe7e90c51b706715611839e195725cfb51f7cc42fd46bfcc3533c6636de"
-      def install
+      url "https://cdn.rilldata.com/rill/v0.82.0/rill_linux_amd64.zip"
+      sha256 "7f1669695568c1ecfebd6ea22c0dcf2d7f08a1ebe21e140a02194853a0c7476a"
+      define_method(:install) do
         bin.install "rill"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://cdn.rilldata.com/rill/v0.81.4/rill_linux_arm64.zip"
-      sha256 "12efd57089d395ce362ae596f977feb56e8c602c7b7f0ba623db2782692ad778"
-      def install
+      url "https://cdn.rilldata.com/rill/v0.82.0/rill_linux_arm64.zip"
+      sha256 "c472160b48adaec47068b3e015196b6844db5ac9e270864f4fd7cf154ad40da1"
+      define_method(:install) do
         bin.install "rill"
       end
     end
